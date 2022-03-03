@@ -3,10 +3,10 @@ import axios from "axios";
 import { nanoid } from "nanoid";
 import "./Home.css";
 import NewProject from "../components/NewProject";
+import AddProject from "../components/createProject"
 var id = nanoid(4);
 function Home() {
   const [project, setProject] = useState([]);
-  const handleClick = () => {};
   useEffect(() => {
     const pro = async () => {
       let data = await axios("http://localhost:5000/api/project");
@@ -27,9 +27,10 @@ function Home() {
           </div>
         ))}
 
-        <div className="add_project" onClick={handleClick}>
-          <p>+ ADD NEW PROJECT</p>
+        <div className="add_project">
+          <AddProject/>
         </div>
+        
       </div>
     </>
   );
