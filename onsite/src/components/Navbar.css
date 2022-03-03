@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  border: 1px solid black;
+  height: 50px;
+  background-color: #94b49f;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-return {
+  width: 30%;
+  text-align: center;
+}
+.navbar-tabs {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar-tabs > div {
+  padding: 10px;
+}
+.navbar-tabs > div:hover {
+  background-color: #b4cfb0;
+}
+.navbar_link{
+    color: black;
+}

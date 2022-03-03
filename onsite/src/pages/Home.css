@@ -1,0 +1,26 @@
+.home {
+  text-align: center;
+  border: 1px solid black;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #94b49f;
+}
+.project_tab {
+  margin-top: 10px;
+}
+.add_project {
+  border: 1px solid black;
+  width: 70%;
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #084594;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  text-align: center;
+  padding-top: 9px;
+}

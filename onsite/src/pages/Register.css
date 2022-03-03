@@ -1,0 +1,29 @@
+.register {
+  margin: auto;
+  padding: 35px;
+  border: 1px solid black;
+  margin-top: 100px;
+  border-radius: 5px;
+  width: 40%;
+  background-color: #eeedde;
+  justify-content: center;
+  text-align: center;
+}
+.register > form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0px;
+}
+.button {
+  width: 40%;
+  align-self: center;
+  height: 30px;
+  background-color: #e0ddaa;
+  border-radius: 5px;
+}
+Link {
+  color: black;
+}
+input {
+  height: 30px;
+}
