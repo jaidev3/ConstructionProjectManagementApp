@@ -1,6 +1,8 @@
 const express = require("express");
+var cors = require('cors')
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 //import controller
 const userController = require("./controller/user.controller");

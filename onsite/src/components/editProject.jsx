@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { styled } from "styled-components";
-import { useSelector, useDispatch } from "react-redux";
-import { addProject } from "../redux/action/projectAction";
+import { useParams } from "react-router-dom";
+import {useDispatch } from "react-redux";
+import { editProject } from "../redux/action/projectAction";
 
 const style = {
   position: "absolute",
@@ -22,13 +22,14 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
+export default function BasicModal({ value }) {
+  const { id } = useParams();
   const dispatch = useDispatch();
   ////form////////
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/api/project", data);
-    dispatch(addProject(data));
+    axios.patch(`http://localhost:5000/api/project/${value}`, data);
+    dispatch(editProject(data));
   };
   ///////////
   const [open, setOpen] = React.useState(false);
@@ -38,7 +39,9 @@ export default function BasicModal() {
   return (
     <div>
       <Button onClick={handleOpen}>
-        <p style={{ color: "white" }}>+ ADD NEW PROJECT</p>
+        <p style={{ color: "black", margin: "0" }}>
+          <b>Edit</b>
+        </p>
       </Button>
       <Modal
         open={open}
@@ -59,11 +62,7 @@ export default function BasicModal() {
                 <br />
                 <input {...register("location")} placeholder="location" />
                 <br />
-                <input
-                  className="button"
-                  type="submit"
-                  value="Create Project"
-                />
+                <input className="button" type="submit" value="Edit Project" />
               </form>
             </div>
           </Typography>

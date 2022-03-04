@@ -10,17 +10,17 @@ export const addProject = (payload) => ({
   payload,
 });
 
-export const removeProject = (id) => ({
+export const removeProject = (payload) => ({
   type: REMOVE_PROJECT,
-  payload: id,
+  payload
 });
 
-export const toggleProject = (id) => ({
+export const toggleProject = (payload) => ({
   type: TOGGLE_PROJECT,
-  payload: id,
+  payload
 });
 
-export const editProject = (id) => ({
+export const editProject = (payload) => ({
   type: EDIT_PROJECT,
-  payload: id,
+  payload
 });

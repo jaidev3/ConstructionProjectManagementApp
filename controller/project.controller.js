@@ -10,8 +10,8 @@ const User = require("../model/user.model");
 // @route    POST api/project
 // @desc     Create or update user project
 // @access   Private(infuture)...currently Public
-router.post("/", auth, async (req, res) => {
-  const user = req.user;
+router.post("/", async (req, res) => {
+  const user = "621cd85d82f38a56e120941a";
 
   let project = await Project.create({
     project_name: req.body.project_name,
@@ -19,7 +19,7 @@ router.post("/", auth, async (req, res) => {
     location: req.body.location,
     description: req.body.description,
     date: req.body.date,
-    user: user.user._id,
+    user: user,
   });
   return res.status(200).json({ project: project });
 });
