@@ -10,7 +10,7 @@ const MaterialSchema = new mongoose.Schema({
   rate: { type: Number, required: false },
   price: { type: Number, required: true },
   description: { type: String, required: false },
-  progress:{type:Number,default:0}
+  progress: { type: Number, default: 0 },
 });
 
 module.exports = mongoose.model("material", MaterialSchema);

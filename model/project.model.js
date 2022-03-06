@@ -9,10 +9,7 @@ const ProjectSchema = new mongoose.Schema({
   location: { type: String, required: true },
   company: { type: String, required: true },
   description: { type: String, required: false },
-  date: {
-    type: Date,
-    default: Date.now,
-  },
+  date: { type: Date, default: Date.now },
 });
 
 module.exports = mongoose.model("project", ProjectSchema);

@@ -6,7 +6,7 @@ const PhotoSchema = new mongoose.Schema({
     ref: "project",
   },
   photo_url: { type: String, required: true },
-  description:{type:String,required:false}
+  description: { type: String, required: false },
 });
 
 module.exports = mongoose.model("photo", PhotoSchema);

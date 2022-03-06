@@ -7,8 +7,8 @@ const PaymentSchema = new mongoose.Schema({
   },
   payment: { type: String, required: true },
   amount: { type: Number, required: true },
-  description: { type: String, required: false},
-  type:{type:String,required:true}
+  description: { type: String, required: false },
+  type: { type: String, required: true },
 });
 
 module.exports = mongoose.model("payment", PaymentSchema);

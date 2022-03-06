@@ -7,9 +7,8 @@ const TaskSchema = new mongoose.Schema({
   },
   task_name: { type: String, required: true },
   description: { type: String, required: true },
-  progress: { type: Number, default:0 },
-  status:{type:Boolean,default:false}
+  progress: { type: Number, default: 0 },
+  status: { type: Boolean, default: false },
 });
 
 module.exports = mongoose.model("task", TaskSchema);
-
